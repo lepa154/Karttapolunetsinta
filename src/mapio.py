@@ -1,12 +1,14 @@
 import random
 
-def read_map():
-    with open ("./data/maps/map2.txt", "r", encoding="utf-8") as f:
+# convert a text file into a list, where each line is a list
+def read_map(): 
+    with open ("./data/maps/map_london.txt", "r", encoding="utf-8") as f:
         lines = [list(line.strip()) for line in f]
 
     return lines
 
-def random_start_and_end(map):
+# random starting and ending points 
+def random_start_and_end(map): 
     height = (len(map))-1
     witdh = len((map[0]))-1
 
